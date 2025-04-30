@@ -250,7 +250,21 @@ export default function CadenceBuilder() {
       <div className="overflow-x-auto">
         <div className="grid" style={{ display: 'grid', gridTemplateColumns: `repeat(${totalSteps}, minmax(2rem, 1fr))` }}>
           {grid.map((cell, i) => (
-            <div key={i} className={`border h-44 min-w-[3rem] flex flex-col items-center justify-start ${currentStep === i ? 'bg-yellow-300' : ''}`}>
+            <div
+  key={i}
+  className={`border h-44 min-w-[3rem] flex flex-col items-center justify-start ${
+    currentStep === i ? 'bg-yellow-300' : ''
+  } ${
+    cell.note === '4n' ? 'bg-green-200' :
+    cell.note === '8n' ? 'bg-blue-200' :
+    cell.note === '16n' ? 'bg-purple-200' :
+    cell.note === '8t' ? 'bg-pink-200' :
+    cell.note === '32n' ? 'bg-orange-200' :
+    cell.note === 'pause' ? 'bg-gray-200' :
+    ''
+  }`}
+>
+' : ''}`}>
               <select value={cell.note || ''} onChange={e => updateGrid(i, 'note', e.target.value)} className="text-xs w-full">
                 <option value="">--</option>
                 {noteTypes.map(n => (
