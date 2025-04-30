@@ -15,7 +15,9 @@
     "wavesurfer.js": "^7.6.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.1",
-    "vite": "^6.3.4"
+  "vite": "^5.2.0",
+  "@vitejs/plugin-react": "^4.0.3"
+}
+
   }
 }
