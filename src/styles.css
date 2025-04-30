@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color, #fff);
+  color: var(--text-color, #000);
+}
+input[type="range"] {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr)) !important;
+  }
+  .min-w-\[3rem\] {
+    min-width: 2.5rem !important;
+  }
+  .h-44 {
+    height: auto !important;
+  }
+  select, input {
+    font-size: 12px;
+  }
+  button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
